@@ -1,0 +1,22 @@
+{
+  "name": "graphql-comments",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "git@github.com:zEduardofaria/graphql-comments.git",
+  "author": "Eduardo <z.eduardofaria@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0",
+    "graphql-iso-date": "^3.6.1",
+    "mongoose": "^5.9.2",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "sucrase": "^3.12.1"
+  }
+}
