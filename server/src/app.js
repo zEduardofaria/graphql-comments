@@ -1,12 +1,12 @@
-import 'dotenv/config';
-import { ApolloServer } from 'apollo-server'
-import mongoose from 'mongoose';
+import "dotenv/config";
+import { ApolloServer } from "apollo-server";
+import mongoose from "mongoose";
 
-import schema from './schema';
+import schema from "./schema";
 
 const server = new ApolloServer({
   schema,
-  playground: process.env.NODE_ENV === 'development'
+  playground: process.env.NODE_ENV === "development"
 });
 
 mongoose.connect(process.env.MONGO_URL, {

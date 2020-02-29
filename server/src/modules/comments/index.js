@@ -1,14 +1,19 @@
-import { GraphQLString, GraphQLList, GraphQLInputObjectType } from 'graphql';
+import {
+  GraphQLString,
+  GraphQLList,
+  GraphQLInputObjectType,
+  GraphQLNonNull
+} from "graphql"
 
-import CommentType from './CommentType';
-import { getComments, saveComment } from './CommentLoader';
+import CommentType from "./CommentType"
+import { getComments, saveComment, deleteComments } from "./CommentLoader"
 
 export const queries = {
-  getComments: {
+  comments: {
     type: GraphQLList(CommentType),
     resolve: getComments
   }
-};
+}
 
 export const mutations = {
   saveComment: {
@@ -17,7 +22,7 @@ export const mutations = {
     args: {
       input: {
         type: new GraphQLInputObjectType({
-          name: 'CommentInput',
+          name: "CommentInput",
           fields: {
             name: {
               type: GraphQLString
@@ -28,6 +33,13 @@ export const mutations = {
           }
         })
       }
-    },
+    }
+  },
+  deleteComments: {
+    type: CommentType,
+    resolve: deleteComments,
+    args: {
+      id: { type: new GraphQLNonNull(GraphQLString) }
+    }
   }
-};
+}

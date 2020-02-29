@@ -1,8 +1,8 @@
-import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
-import { GraphQLDateTime } from 'graphql-iso-date';
+import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from "graphql"
+import { GraphQLDateTime } from "graphql-iso-date"
 
 export default new GraphQLObjectType({
-  name: 'CommentType',
+  name: "CommentType",
   fields: {
     id: {
       type: GraphQLNonNull(GraphQLString)
@@ -18,6 +18,9 @@ export default new GraphQLObjectType({
     },
     updatedAt: {
       type: GraphQLNonNull(GraphQLDateTime)
+    },
+    orderBy: {
+      type: GraphQLDateTime
     }
   }
-});
+})

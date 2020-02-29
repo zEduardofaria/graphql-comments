@@ -1,20 +1,19 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model } from "mongoose";
 
 const schema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     content: {
       type: String,
-      required: true,
+      required: true
     }
-  }, 
+  },
   {
-    timestamps: true,
+    timestamps: true
   }
 );
 
-
-export default new model('Comment', schema);
+export default model("Comment", schema);

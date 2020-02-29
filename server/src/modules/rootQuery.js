@@ -1,4 +1,4 @@
-import { queries } from './comments';
+import { queries } from "./comments";
 
 export default {
   ...queries
