@@ -8,7 +8,7 @@ import Form from "./components/Form";
 
 const GET_COMMENTS = gql`
   query {
-    getComments {
+    comments {
       id
       name
       content
